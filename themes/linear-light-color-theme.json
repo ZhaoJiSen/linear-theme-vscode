@@ -297,7 +297,7 @@
         "variable.parameter.function-call"
       ],
       "settings": {
-        "foreground": "#a838a8",
+        "foreground": "#3c4149",
         "fontStyle": "italic"
       }
     },
@@ -355,15 +355,17 @@
       }
     },
     {
-      "name": "Escapes & regex",
+      "name": "Escapes & regex special chars",
       "scope": [
         "constant.character.escape",
         "constant.other.character-class.regexp",
-        "string.regexp",
-        "punctuation.definition.group.regexp"
+        "keyword.control.anchor.regexp",
+        "keyword.operator.quantifier.regexp",
+        "punctuation.definition.group.regexp",
+        "punctuation.definition.character-class.regexp"
       ],
       "settings": {
-        "foreground": "#1a8a55"
+        "foreground": "#c25a2b"
       }
     },
     {
@@ -379,11 +381,15 @@
       }
     },
     {
-      "name": "Template expression punctuation",
+      "name": "Template / interpolation delimiters (`${}`, Vue `{{ }}`)",
       "scope": [
         "punctuation.definition.template-expression",
         "punctuation.section.embedded",
-        "meta.template.expression"
+        "meta.template.expression",
+        "punctuation.definition.interpolation.begin",
+        "punctuation.definition.interpolation.end",
+        "punctuation.section.interpolation",
+        "punctuation.definition.interpolation"
       ],
       "settings": {
         "foreground": "#5b51d8"
@@ -479,7 +485,7 @@
         "entity.name.type.namespace"
       ],
       "settings": {
-        "foreground": "#2f6fd0"
+        "foreground": "#62666d"
       }
     },
     {
@@ -710,6 +716,19 @@
       }
     },
     {
+      "name": "CSS custom properties (--var) & var() references",
+      "scope": [
+        "variable.css",
+        "variable.argument.css",
+        "support.type.custom-property.name.css",
+        "variable.other.custom-property",
+        "punctuation.definition.custom-property.css"
+      ],
+      "settings": {
+        "foreground": "#0f8a99"
+      }
+    },
+    {
       "name": "CSS class & id selectors",
       "scope": [
         "entity.other.attribute-name.class.css",
@@ -890,7 +909,10 @@
     }
   ],
   "semanticTokenColors": {
-    "parameter": "#a838a8",
+    "parameter": {
+      "foreground": "#3c4149",
+      "fontStyle": "italic"
+    },
     "property": "#2f6fd0",
     "variable.readonly": "#0f8a99",
     "variable.defaultLibrary": "#5b51d8",
@@ -901,7 +923,7 @@
     "type": "#2f6fd0",
     "struct": "#2f6fd0",
     "interface": "#2f6fd0",
-    "namespace": "#2f6fd0",
+    "namespace": "#62666d",
     "decorator": "#a838a8",
     "macro": "#a838a8",
     "lifetime": {

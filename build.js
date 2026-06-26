@@ -141,7 +141,7 @@ function tokenColors(p, italic) {
     {
       name: "Parameters",
       scope: ["variable.parameter", "meta.function.parameters", "variable.parameter.function-call"],
-      settings: style(p.orchid, true),
+      settings: style(p.inkMuted, true),
     },
     {
       name: "Properties / object keys",
@@ -179,9 +179,16 @@ function tokenColors(p, italic) {
       settings: style(p.terracotta, false),
     },
     {
-      name: "Escapes & regex",
-      scope: ["constant.character.escape", "constant.other.character-class.regexp", "string.regexp", "punctuation.definition.group.regexp"],
-      settings: style(p.green, false),
+      name: "Escapes & regex special chars",
+      scope: [
+        "constant.character.escape",
+        "constant.other.character-class.regexp",
+        "keyword.control.anchor.regexp",
+        "keyword.operator.quantifier.regexp",
+        "punctuation.definition.group.regexp",
+        "punctuation.definition.character-class.regexp",
+      ],
+      settings: style(p.terracotta, false),
     },
     {
       name: "Strings",
@@ -189,8 +196,16 @@ function tokenColors(p, italic) {
       settings: style(p.green, false),
     },
     {
-      name: "Template expression punctuation",
-      scope: ["punctuation.definition.template-expression", "punctuation.section.embedded", "meta.template.expression"],
+      name: "Template / interpolation delimiters (`${}`, Vue `{{ }}`)",
+      scope: [
+        "punctuation.definition.template-expression",
+        "punctuation.section.embedded",
+        "meta.template.expression",
+        "punctuation.definition.interpolation.begin",
+        "punctuation.definition.interpolation.end",
+        "punctuation.section.interpolation",
+        "punctuation.definition.interpolation",
+      ],
       settings: style(p.lavender, false),
     },
     {
@@ -237,7 +252,7 @@ function tokenColors(p, italic) {
     {
       name: "Namespaces / modules / packages",
       scope: ["entity.name.namespace", "entity.name.module", "support.module", "entity.name.scope-resolution", "entity.name.type.namespace"],
-      settings: style(p.blue, false),
+      settings: style(p.inkSubtle, false),
     },
     {
       name: "Tags (HTML/JSX/XML/Vue)",
@@ -355,6 +370,17 @@ function tokenColors(p, italic) {
       settings: style(p.terracotta, false),
     },
     {
+      name: "CSS custom properties (--var) & var() references",
+      scope: [
+        "variable.css",
+        "variable.argument.css",
+        "support.type.custom-property.name.css",
+        "variable.other.custom-property",
+        "punctuation.definition.custom-property.css",
+      ],
+      settings: style(p.cyan, false),
+    },
+    {
       name: "CSS class & id selectors",
       scope: ["entity.other.attribute-name.class.css", "entity.other.attribute-name.id.css", "entity.other.attribute-name.class.scss"],
       settings: style(p.amber, false),
@@ -415,7 +441,7 @@ function tokenColors(p, italic) {
 // ---------------------------------------------------------------------------
 function semanticTokenColors(p, italic) {
   return {
-    parameter: p.orchid,
+    parameter: { foreground: p.inkMuted, fontStyle: italic ? "italic" : "" },
     property: p.blue,
     "variable.readonly": p.cyan,
     "variable.defaultLibrary": p.lavender,
@@ -426,7 +452,7 @@ function semanticTokenColors(p, italic) {
     type: p.blue,
     struct: p.blue,
     interface: p.blue,
-    namespace: p.blue,
+    namespace: p.inkSubtle,
     decorator: p.orchid,
     macro: p.orchid,
     lifetime: { foreground: p.terracotta, fontStyle: italic ? "italic" : "" },

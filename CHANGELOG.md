@@ -1,9 +1,13 @@
 # Change Log
 
-## [Unreleased]
+## [0.2.0] - 2026-06-26
 
 - Enum members and named constants now use a dedicated cyan, so they no longer share the blue of the enum/type name they belong to.
 - Reworked HTML/Vue/JSX tag coloring: tag name (lavender), angle-bracket punctuation (dimmed), attribute name (amber), attribute value (green), and Vue directives `v-*` / `@` / `:` / `#` (orchid italic) are now visually distinct.
+- String escapes and regex special chars (`\n`, `\d`, anchors, quantifiers) move to terracotta so they stand out from the green string body.
+- Function parameters move to a soft foreground, freeing orchid to read clearly as decorators (no more `@decorator` / parameter color clash).
+- Namespace / path prefixes (`std::`, `React.`) dim to a subtle gray so the type name keeps the blue emphasis.
+- Added coloring for CSS custom properties (`--var` and `var()` references) and Vue/template interpolation delimiters (`{{ }}`, `${}`).
 - Added GitHub Actions release workflow: pushing a `v*` tag builds, packages, and publishes to the VS Code Marketplace (and Open VSX if configured), then creates a GitHub Release.
 
 ## [0.1.0] - 2026-06-26
