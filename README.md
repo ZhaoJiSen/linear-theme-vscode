@@ -37,20 +37,38 @@ Tuned syntax highlighting for: Go, Rust, JavaScript, TypeScript, JSX/React, Vue,
 | Accent hover | `#828fff` |
 | Success | `#27a644` |
 
-Syntax highlighting draws from Linear's in-product tag palette (blue, lavender, green, amber, terracotta, orchid) so the colors stay true to the brand while remaining readable on near-black.
+Syntax highlighting draws from Linear's in-product tag palette (blue, lavender, green, cyan, amber, terracotta, orchid) so the colors stay true to the brand while remaining readable. Type names and enum names sit in blue; constants and enum members get their own cyan so they never blend into the type they belong to.
 
 ## Install
 
 ### From source (local)
 
 ```bash
+npm install            # installs vsce + ovsx locally
 npm run build          # regenerate the four theme JSONs from build.js
-npm install -g @vscode/vsce
-vsce package
+npm run package        # build + produce the .vsix
 code --install-extension linear-theme-vscode-0.1.0.vsix
 ```
 
 Then open the Command Palette (`Cmd/Ctrl + Shift + P`) → **Preferences: Color Theme** → pick a Linear variant.
+
+## Publishing & auto-updates
+
+Publishing is automated via GitHub Actions (`.github/workflows/publish.yml`). Once published, the Marketplace handles auto-updates for users — VS Code pulls new versions automatically.
+
+One-time setup — add these repository secrets (Settings → Secrets and variables → Actions):
+
+- `VSCE_PAT` — an Azure DevOps Personal Access Token with **Marketplace › Manage** scope (required).
+- `OVSX_PAT` — an Open VSX token (optional; the Open VSX step is skipped if unset).
+
+To cut a release, bump the version and push a matching tag:
+
+```bash
+npm version patch       # or minor / major — updates package.json + commits + tags
+git push && git push --tags
+```
+
+The workflow verifies the tag matches `package.json`, builds, packages, publishes to the Marketplace (and Open VSX if configured), and attaches the `.vsix` to a GitHub Release. The tag version **must** equal the `package.json` version or the run fails fast.
 
 ## Customizing
 

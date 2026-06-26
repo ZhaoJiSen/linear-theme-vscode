@@ -326,15 +326,17 @@
       }
     },
     {
-      "name": "Constants & enums",
+      "name": "Constants & enum members",
       "scope": [
         "variable.other.constant",
         "constant.other",
         "constant.other.caps",
-        "variable.other.enummember"
+        "variable.other.enummember",
+        "constant.other.enum",
+        "entity.name.constant"
       ],
       "settings": {
-        "foreground": "#2f6fd0"
+        "foreground": "#0f8a99"
       }
     },
     {
@@ -484,30 +486,43 @@
       "name": "Tags (HTML/JSX/XML/Vue)",
       "scope": [
         "entity.name.tag",
-        "punctuation.definition.tag",
         "entity.name.tag.html",
-        "entity.name.tag.template"
+        "entity.name.tag.template",
+        "entity.name.tag.script",
+        "entity.name.tag.style"
       ],
       "settings": {
         "foreground": "#5b51d8"
       }
     },
     {
+      "name": "Tag angle-bracket punctuation",
+      "scope": [
+        "punctuation.definition.tag",
+        "punctuation.definition.tag.begin",
+        "punctuation.definition.tag.end",
+        "punctuation.definition.tag.html"
+      ],
+      "settings": {
+        "foreground": "#8a93a8"
+      }
+    },
+    {
       "name": "Component tags (JSX/Vue PascalCase)",
       "scope": [
         "support.class.component",
-        "entity.name.tag.namespace"
+        "entity.name.tag.namespace",
+        "meta.tag.custom"
       ],
       "settings": {
         "foreground": "#2f6fd0"
       }
     },
     {
-      "name": "Tag attributes",
+      "name": "Tag attribute names",
       "scope": [
         "entity.other.attribute-name",
-        "entity.other.attribute-name.html",
-        "entity.other.attribute-name.vue"
+        "entity.other.attribute-name.html"
       ],
       "settings": {
         "foreground": "#9a6a00",
@@ -515,13 +530,28 @@
       }
     },
     {
-      "name": "Vue directives",
+      "name": "HTML/Vue attribute values",
       "scope": [
-        "entity.other.attribute-name.vue.directive",
-        "meta.directive.vue"
+        "meta.attribute string.quoted",
+        "string.quoted.double.html",
+        "string.quoted.single.html"
       ],
       "settings": {
-        "foreground": "#5b51d8",
+        "foreground": "#1a8a55"
+      }
+    },
+    {
+      "name": "Vue directives (v-if / @click / :prop / #slot)",
+      "scope": [
+        "entity.other.attribute-name.vue.directive",
+        "meta.directive.vue",
+        "entity.other.attribute-name.vue",
+        "punctuation.attribute-shorthand.bind.html.vue",
+        "punctuation.attribute-shorthand.event.html.vue",
+        "punctuation.separator.key-value.html.vue"
+      ],
+      "settings": {
+        "foreground": "#a838a8",
         "fontStyle": "italic"
       }
     },
@@ -862,11 +892,12 @@
   "semanticTokenColors": {
     "parameter": "#a838a8",
     "property": "#2f6fd0",
-    "variable.readonly": "#2f6fd0",
+    "variable.readonly": "#0f8a99",
     "variable.defaultLibrary": "#5b51d8",
     "function.defaultLibrary": "#9a6a00",
     "class.defaultLibrary": "#2f6fd0",
-    "enumMember": "#2f6fd0",
+    "enum": "#2f6fd0",
+    "enumMember": "#0f8a99",
     "type": "#2f6fd0",
     "struct": "#2f6fd0",
     "interface": "#2f6fd0",

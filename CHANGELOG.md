@@ -1,5 +1,11 @@
 # Change Log
 
+## [Unreleased]
+
+- Enum members and named constants now use a dedicated cyan, so they no longer share the blue of the enum/type name they belong to.
+- Reworked HTML/Vue/JSX tag coloring: tag name (lavender), angle-bracket punctuation (dimmed), attribute name (amber), attribute value (green), and Vue directives `v-*` / `@` / `:` / `#` (orchid italic) are now visually distinct.
+- Added GitHub Actions release workflow: pushing a `v*` tag builds, packages, and publishes to the VS Code Marketplace (and Open VSX if configured), then creates a GitHub Release.
+
 ## [0.1.0] - 2026-06-26
 
 - Initial release with four variants: Linear Dark, Linear Dark No Italics, Linear Light, Linear Light No Italics.
