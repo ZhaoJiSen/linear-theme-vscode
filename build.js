@@ -64,6 +64,24 @@ const dark = {
   scrollSlider: "#23252a80",
 };
 
+// "Soft" dark: same ink / accent / syntax as `dark`, but the canvas is lifted
+// off near-black to a comfortable charcoal for low-contrast environments.
+// Only the surface ladder, hairlines, and canvas-derived alpha helpers move;
+// everything else is reused so it stays the same theme, just less dim.
+const darkSoft = {
+  ...dark,
+  canvas: "#16171a",
+  surface1: "#1c1d21",
+  surface2: "#212327",
+  surface3: "#26282d",
+  surface4: "#2a2c31",
+  hairline: "#303339",
+  hairlineStrong: "#3c3f46",
+  hairlineTertiary: "#474a52",
+  lineHighlight: "#1d1e22",
+  scrollSlider: "#3c3f4680",
+};
+
 const light = {
   // surfaces — near-white canvas, lifted panels go slightly cooler
   canvas: "#ffffff",
@@ -771,6 +789,8 @@ function workbenchColors(p) {
 const variants = [
   { name: "Linear Dark", file: "linear-dark", type: "dark", palette: dark, italic: true },
   { name: "Linear Dark No Italics", file: "linear-dark-no-italics", type: "dark", palette: dark, italic: false },
+  { name: "Linear Dark Soft", file: "linear-dark-soft", type: "dark", palette: darkSoft, italic: true },
+  { name: "Linear Dark Soft No Italics", file: "linear-dark-soft-no-italics", type: "dark", palette: darkSoft, italic: false },
   { name: "Linear Light", file: "linear-light", type: "light", palette: light, italic: true },
   { name: "Linear Light No Italics", file: "linear-light-no-italics", type: "light", palette: light, italic: false },
 ];

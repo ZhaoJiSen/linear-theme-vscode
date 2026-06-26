@@ -2,7 +2,7 @@
   "name": "linear-theme-vscode",
   "displayName": "Lavender — Linear Theme",
   "description": "A near-black VS Code color theme built around Linear's design system — deep canvas (#010102), a four-step surface ladder, and the signature lavender-blue accent.",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "publisher": "ZhaoJiSen",
   "license": "MIT",
   "engines": {
@@ -39,6 +39,16 @@
         "label": "Linear Dark No Italics",
         "uiTheme": "vs-dark",
         "path": "./themes/linear-dark-no-italics-color-theme.json"
+      },
+      {
+        "label": "Linear Dark Soft",
+        "uiTheme": "vs-dark",
+        "path": "./themes/linear-dark-soft-color-theme.json"
+      },
+      {
+        "label": "Linear Dark Soft No Italics",
+        "uiTheme": "vs-dark",
+        "path": "./themes/linear-dark-soft-no-italics-color-theme.json"
       },
       {
         "label": "Linear Light",

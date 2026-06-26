@@ -1,5 +1,9 @@
 # Change Log
 
+## [0.3.0] - 2026-06-26
+
+- Added two **Soft** dark variants (Linear Dark Soft / Linear Dark Soft No Italics) that lift the canvas from near-black `#010102` to a charcoal `#16171a` for low-contrast / bright-room comfort. Ink, accent, and all syntax colors are unchanged — only the surface ladder and hairlines move.
+
 ## [0.2.0] - 2026-06-26
 
 - Enum members and named constants now use a dedicated cyan, so they no longer share the blue of the enum/type name they belong to.

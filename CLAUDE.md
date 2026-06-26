@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## What this is
 
-A VS Code color theme extension presenting Linear's design system. It ships **four theme variants** (Linear Dark / Linear Light, each in italic and No-Italics cuts).
+A VS Code color theme extension presenting Linear's design system. It ships **six theme variants**: Linear Dark / Dark Soft / Light, each in italic and No-Italics cuts. The "Soft" dark palette is `dark` with a lifted (charcoal) canvas for low-contrast comfort — defined via `{ ...dark, ...surface overrides }` so it shares all ink/accent/syntax colors.
 
 ## Critical: themes are generated, never hand-edited
 

@@ -8,14 +8,18 @@ The theme keeps chrome quiet and lets code do the heavy lifting, mirroring how L
 
 Four themes ship in this extension — pick via **Preferences: Color Theme**:
 
-| Theme | Mode | Keywords |
-|---|---|---|
-| **Linear Dark** | dark | italic |
-| **Linear Dark No Italics** | dark | upright |
-| **Linear Light** | light | italic |
-| **Linear Light No Italics** | light | upright |
+Six themes ship in this extension — pick via **Preferences: Color Theme**:
 
-The italic variants italicize keywords, comments, `this`/`self`, parameters, and HTML/Vue attributes. The "No Italics" variants keep everything upright.
+| Theme | Mode | Canvas | Keywords |
+|---|---|---|---|
+| **Linear Dark** | dark | near-black `#010102` | italic |
+| **Linear Dark No Italics** | dark | near-black `#010102` | upright |
+| **Linear Dark Soft** | dark | charcoal `#16171a` | italic |
+| **Linear Dark Soft No Italics** | dark | charcoal `#16171a` | upright |
+| **Linear Light** | light | white `#ffffff` | italic |
+| **Linear Light No Italics** | light | white `#ffffff` | upright |
+
+The **Soft** variants lift the background off Linear's near-black canvas to a comfortable charcoal — same ink, accent, and syntax colors, easier on the eyes in bright rooms. The italic variants italicize keywords, comments, `this`/`self`, parameters, and HTML/Vue attributes; the "No Italics" variants keep everything upright.
 
 ## Language coverage
 
