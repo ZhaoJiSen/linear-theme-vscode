@@ -1,0 +1,62 @@
+{
+  "name": "linear-theme-vscode",
+  "displayName": "Linear Theme",
+  "description": "A near-black VS Code color theme built around Linear's design system — deep canvas (#010102), a four-step surface ladder, and the signature lavender-blue accent.",
+  "version": "0.1.0",
+  "publisher": "ZhaoJiSen",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.70.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "keywords": [
+    "linear",
+    "dark",
+    "theme",
+    "lavender",
+    "minimal"
+  ],
+  "icon": "icon.png",
+  "galleryBanner": {
+    "color": "#010102",
+    "theme": "dark"
+  },
+  "scripts": {
+    "build": "node build.js",
+    "package": "npm run build && vsce package",
+    "vscode:prepublish": "node build.js"
+  },
+  "contributes": {
+    "themes": [
+      {
+        "label": "Linear Dark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/linear-dark-color-theme.json"
+      },
+      {
+        "label": "Linear Dark No Italics",
+        "uiTheme": "vs-dark",
+        "path": "./themes/linear-dark-no-italics-color-theme.json"
+      },
+      {
+        "label": "Linear Light",
+        "uiTheme": "vs",
+        "path": "./themes/linear-light-color-theme.json"
+      },
+      {
+        "label": "Linear Light No Italics",
+        "uiTheme": "vs",
+        "path": "./themes/linear-light-no-italics-color-theme.json"
+      }
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ZhaoJiSen/linear-theme-vscode"
+  },
+  "devDependencies": {
+    "@vscode/vsce": "^3.9.2"
+  }
+}
